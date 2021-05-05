@@ -34,6 +34,27 @@ function addNewTask(item, priority) {
   buttons.classList.add("buttons");
 
   // Botón eliminar
+  let remove = document.createElement("button");
+  remove.innerText = "-";
+  remove.classList.add("remove");
+  remove.addEventListener("click", removeItem);
+
+  buttons.appendChild(remove);
+  newItem.appendChild(button);
+
+  list.insertBefore(newItem, list.childNodes[0]);
+}
+
+function createTodo(item) {
+  return `
+    ${item}
+    <div class="buttons><button class="remove>-</button>
+    </div>`;
 }
 
 // eventListener para las tareas precargadas
+
+let deleteIt = document.getElementsByClassName("remove");
+for (let i = 0; i < deleteIt.length; i++) {
+  deleteIt[i].addEventListener("click", removeItem);
+}

@@ -31,3 +31,51 @@ input {
   position: absolute;
   font-size: 15px;
 }
+
+#wrapper {
+  width: 100%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  width: 100%;
+  min-height: 50px;
+  padding: 5px 15px;
+  border-bottom: 1px solid black;
+  font-size: 15px;
+  line-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+
+li.daily {
+  background-color: red;
+}
+
+li.weekly {
+  background-color: yellow;
+}
+
+li.monthly {
+  background-color: green;
+}
+
+.buttons button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.remove {
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 5px;
+}

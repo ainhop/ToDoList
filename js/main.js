@@ -22,6 +22,18 @@ todos.forEach(function (todo) {
 
 // Añadir una tarea nueva
 
-// Botón eliminar
+function addNewTask(item, priority) {
+  let list = document.getElementById("todo");
+  // const newItemContent = createTodo(item, priority);
+  let newItem = document.createElement("li");
+  newItem.classList.add(priority);
+  // newItem.innerHTML = newItemContent;
+  newItem.innerText = item;
+
+  let buttons = document.createElement("div");
+  buttons.classList.add("buttons");
+
+  // Botón eliminar
+}
 
 // eventListener para las tareas precargadas

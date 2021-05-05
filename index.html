@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,6 +9,45 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div id="app">
+      <header>
+        <h2>Lista de tareas</h2>
+        <input
+          type="text"
+          name="text"
+          placeholder="Escribe una tarea"
+          id="text"
+        />
+        <button id="new">+</button>
+
+        <select id="priority">
+          <option value="" selected>¿Qué prioridad tiene?</option>
+          <option value="daily">diaria</option>
+          <option value="weekly">semanal</option>
+          <option value="monthly">mensual</option>
+        </select>
+      </header>
+      <div id="wrapper">
+        <!-- Tareas por hacer / esto como ejemplo que no se usará pero ayuda-->
+        <ul id="todo">
+          <!-- <li>Pintar por pantalla
+     <div class="buttons">
+       <button class="remove">-</button>
+     </div>
+    </li>
+       <li>Sacar por consola
+     <div class="buttons">
+       <button class="remove">-</button>
+     </div>
+    </li>
+       <li>Recorrer un array
+     <div class="buttons">
+       <button class="remove">-</button>
+     </div>
+    </li> -->
+        </ul>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

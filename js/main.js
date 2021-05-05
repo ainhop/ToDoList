@@ -12,13 +12,13 @@ document.getElementById("new").addEventListener("click", function () {
 // console.log(todos);
 todos.forEach(function (todo) {
   addNewTask(todo.text, todo.priority);
-}),
-  function removeItem() {
-    let item = this.parentNode.parentNode; // los lis
-    let parent = item.parentNode; // el ul
+});
+function removeItem() {
+  let item = this.parentNode.parentNode; // los lis
+  let parent = item.parentNode; // el ul
 
-    parent.removeChild(item);
-  };
+  parent.removeChild(item);
+}
 
 // Añadir una tarea nueva
 
@@ -40,7 +40,7 @@ function addNewTask(item, priority) {
   remove.addEventListener("click", removeItem);
 
   buttons.appendChild(remove);
-  newItem.appendChild(button);
+  newItem.appendChild(buttons);
 
   list.insertBefore(newItem, list.childNodes[0]);
 }
@@ -48,8 +48,10 @@ function addNewTask(item, priority) {
 function createTodo(item) {
   return `
     ${item}
-    <div class="buttons><button class="remove>-</button>
-    </div>`;
+    <div class="buttons">
+        <button class="remove">-</button>
+    </div>
+    `;
 }
 
 // eventListener para las tareas precargadas
